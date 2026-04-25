@@ -4,16 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <title>REGISTER – LawSync</title>
-  <link rel="stylesheet" href="{{ asset('css/css.css') }}">  
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
+  <link rel="stylesheet" href="css/css.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 
-<script src="{{ asset('js/main.js') }}"></script>
+<script src="{{ asset('js/main.js') }}" defer></script>
 
 <body>
 
-  <header class="top-nav">
+  <header class="menu-nav">
     <nav>
       <a href="/">MAIN PAGE</a>
       <a href="/about">ABOUT US</a>
@@ -25,43 +25,45 @@
     </nav>
   </header>
 
-
   <div class="register-container">
-    <img src="{{ asset('pictures/lawsync-logo.png') }}" alt="LawSync logo" class="logo">
     
     <h1>Register</h1>
 
-    <form>
-      <div class="form-group">
+    <form method="POST" action="/register">
+
+      <div class="forms">
         <label for="firstname">First name</label>
-        <input type="text" id="firstname" name="firstname" placeholder="Enter first name">
+        <input class="form-field" type="text" id="firstname" name="firstname" placeholder="Enter first name">
       </div>
 
-      <div class="form-group">
+      <div class="forms">
         <label for="lastname">Last name</label>
-        <input type="text" id="lastname" name="lastname" placeholder="Enter last name">
+        <input class="form-field" type="text" id="lastname" name="lastname" placeholder="Enter last name">
       </div>
 
-      <div class="form-group">
+      <div class="forms">
         <label for="role">Role</label>
-        <select id="role" name="role">
+        <select class="form-field" id="role" name="role">
           <option value="client">customer</option>
           <option value="lawyer">lawyer</option>
         </select>
       </div>
 
-      <div class="form-group">
+      <div class="forms">
         <label for="password">Password</label>
-        <div class="input-wrapper">
-          <input type="password" id="password" name="password" placeholder="Enter password">
-          <i class="bi bi-eye toggle-password"></i>
+
+        <div class="input">
+          <input class="form-field" type="password" id="password" name="password" placeholder="Enter password">
+          <i class="bi bi-eye password-eye"></i>
         </div>
+
       </div>
 
-      <button type="submit">Register</button>
+      <button class="btn" type="submit">Register</button>
+
     </form>
+
   </div>
 
 </body>
-
 </html>

@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>CONTACT – LawSync</title>
-    <link rel="stylesheet" href="{{ asset('css/css.css') }}">
-</head>
+    <link rel="stylesheet" href="css/css.css">
+  </head>
 <body>
 
-    <header class="top-nav">
+    <header class="menu-nav">
         <nav>
             <a href="/">MAIN PAGE</a>
             <a href="/about">ABOUT US</a>
@@ -18,7 +18,7 @@
             <a href="/register">REGISTER</a>
         </nav>
     </header>
-    <main class="page-center">
+    <main class="page">
       <h1>CONTACT</h1>
   </main>
 

@@ -1,4 +1,3 @@
-/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
@@ -6,54 +5,37 @@
   font-family: "Georgia", serif;
 }
 
-/* ===== BODY ===== */
 body {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #0a2f24, #051914);
+  background: #0a2f24;
   color: white;
 }
 
-/* ===== TOP NAV ===== */
-.top-nav {
-  padding: 25px 0;
-}
-
-.top-nav nav {
+.menu-nav nav {
   display: flex;
   justify-content: center;
   gap: 28px;
+  padding: 25px 0;
 }
 
-.top-nav a {
+.menu-nav a {
   color: white;
   text-decoration: none;
-  font-size: 13px;
-  letter-spacing: 1.5px;
-  padding-bottom: 3px;
   border-bottom: 1px solid transparent;
-  transition: 0.3s;
+  /* --- ??? --- */
+
 }
 
-.top-nav a:hover,
-.top-nav a.active {
+.menu-nav a:hover,
+.menu-nav a.active {
   border-bottom: 1px solid white;
 }
 
-/* ===== KÖZÉP CÍM (pl. login oldalhoz) ===== */
-.page-center {
-  height: calc(100vh - 80px);
+.page {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.page-center h1 {
-  font-size: 72px;
-  letter-spacing: 4px;
-  font-weight: normal;
-}
-
-/* ===== FŐOLDAL LAYOUT ===== */
 .main-container {
   display: flex;
   height: 100vh;
@@ -61,13 +43,12 @@ body {
 
 .left {
   width: 50%;
-  background-color: #0a2f24;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.logo-box {
+.logo-container {
   text-align: center;
 }
 
@@ -76,23 +57,12 @@ body {
   margin-bottom: 20px;
 }
 
-.logo-box h1 {
-  font-size: 32px;
-  letter-spacing: 3px;
-}
-
-.logo-box p {
-  font-size: 12px;
-  letter-spacing: 2px;
-  margin-top: 5px;
-}
 
 .right {
-  width: 50%;
+  flex: 1;
   background-image: url("../pictures/236040.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
 
   display: flex;
   align-items: center;
@@ -100,19 +70,10 @@ body {
   position: relative;
 }
 
-.right::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.25);
-}
-
-/* ===== FŐOLDAL MENÜ ===== */
 .menu {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  z-index: 2;
 }
 
 .menu a {
@@ -120,169 +81,93 @@ body {
   color: white;
   background-color: #d59663;
   padding: 14px 60px;
-  text-align: center;
   font-weight: bold;
-  letter-spacing: 1px;
   border-radius: 4px;
-  width: 220px;
+  width: auto;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-  white-space: nowrap;
 }
 
-.menu a:hover {
-  background-color: #b97c4d;
-  transform: translateY(-2px);
-}
-
-/* ===== REGISTER KÁRTYA ===== */
-.register-container {
+.register-container,
+.login-container {
   width: 100%;
   max-width: 420px;
   margin: auto;
-  padding: 45px 40px;
-
+  padding: 32px 24px;
   border-radius: 16px;
-  background: rgba(18, 52, 43, 0.55);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+  background: #19473b;
   text-align: center;
-
-  animation: fadeUp 0.6s ease;
 }
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(25px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.register-container .logo {
-  width: 110px;
-  margin-bottom: 20px;
-}
-
-.register-container h1 {
+.register-container h1,
+.login-container h1 {
   font-size: 30px;
   letter-spacing: 3px;
   margin-bottom: 28px;
   font-weight: 400;
 }
 
-/* ===== FORM ===== */
-.form-group {
+.forms {
   display: flex;
   flex-direction: column;
   text-align: left;
   margin-bottom: 20px;
 }
 
-.form-group label {
-  font-size: 12px;
-  letter-spacing: 1.2px;
+.forms label {
   margin-bottom: 7px;
-  opacity: 0.8;
+  color: #c8c8c8;
 }
 
-/* ===== INPUT ===== */
-.form-group input,
-.register-container select {
+.form-field {
   padding: 13px 14px;
   border-radius: 8px;
-  border: 1px solid transparent;
-  background: rgba(10, 47, 36, 0.85);
+  background: #0a2f24d9;
   color: white;
-  font-size: 14px;
-  transition: 0.25s ease;
+  border: 1px solid #051813d9;
 }
 
-.form-group input:hover,
-.register-container select:hover {
+.form-field:hover,
+.form-field:focus {
   border-color: rgba(213, 150, 99, 0.4);
 }
 
-.form-group input:focus,
-.register-container select:focus {
-  outline: none;
+.form-field:focus {
   border-color: #d59663;
   background: rgba(10, 47, 36, 1);
 }
 
-.form-group input::placeholder {
+.form-field::placeholder {
   color: #bdbdbd;
 }
 
-/* ===== BUTTON ===== */
-.register-container button {
+.btn {
   width: 100%;
-  margin-top: 10px;
   padding: 15px;
   border-radius: 10px;
   border: none;
-
   font-weight: bold;
-  letter-spacing: 1.2px;
-  font-size: 15px;
-
+  font-size: 17px;
   color: white;
-  background: linear-gradient(135deg, #d59663, #b97c4d);
+  background: #d59663;
 
-  cursor: pointer;
-  transition: 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
 }
 
-.register-container button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.45);
-}
-
-.register-container button:active {
-  transform: translateY(0);
-}
-
-/* ===== PASSWORD TOGGLE ===== */
-.input-wrapper {
+.input {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-.input-wrapper input {
+.input input {
   width: 100%;
   padding-right: 44px;
 }
 
-.toggle-password {
+.password-eye {
   position: absolute;
   right: 12px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  height: 100%;
-  font-size: 18px;
-  color: #bdbdbd;
-  cursor: pointer;
-
-  transition: 0.2s ease;
 }
 
-.toggle-password:hover {
-  color: #d59663;
-  transform: scale(1.1);
-}
-
-/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .main-container {
     flex-direction: column;
@@ -290,7 +175,6 @@ body {
 
   .left,
   .right {
-    width: 100%;
     height: 50vh;
   }
 }

@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LawSync</title>
-  <link rel="stylesheet" href="{{ asset('css/css.css') }}">  
+  <link rel="stylesheet" href="css/css.css">
 </head>
 
 <body>
   <div class="main-container">
 
     <div class="left">
-      <div class="logo-box">
+      <div class="logo-container">
         <img src="{{ asset('pictures/lawsync-logo.png') }}" alt="LawSync logo" class="logo">
         <h1>LAWSYNC</h1>
         <p>ATTORNEYS AT LAW</p>

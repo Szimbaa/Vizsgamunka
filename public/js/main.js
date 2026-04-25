@@ -1,15 +1,20 @@
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".toggle-password").forEach(toggle => {
-    toggle.addEventListener("click", () => {
-      const input = toggle.previousElementSibling;
+document.addEventListener("DOMContentLoaded", function () {
+  var a = document.querySelectorAll(".password-eye");
+  for (var i = 0; i < a.length; i++) {
+    var ikon = a[i];
+    ikon.addEventListener("click", function () {
+      var ikon = this;
+      var passw = ikon.previousElementSibling;
+      if (passw.type === "password") {
+        passw.type = "text";
+        ikon.classList.remove("bi-eye");
+        ikon.classList.add("bi-eye-slash");
 
-      if (input.type === "password") {
-        input.type = "text";
-        toggle.classList.replace("bi-eye", "bi-eye-slash");
       } else {
-        input.type = "password";
-        toggle.classList.replace("bi-eye-slash", "bi-eye");
+        passw.type = "password";
+        ikon.classList.remove("bi-eye-slash");
+        ikon.classList.add("bi-eye");
       }
     });
-  });
+  }
 });

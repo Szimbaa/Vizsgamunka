@@ -29,3 +29,7 @@ Route::get('/services', function () {
 Route::get('/team', function () {
     return view('team');
 })->name('team');
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
