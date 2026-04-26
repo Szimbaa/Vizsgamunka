@@ -18,8 +18,8 @@ class DeadlineFactory extends Factory
     public function definition(): array
     {
       return [
-            'case_id' => fake()->numberBetween(1, 50),
-            'client_id' => fake()->numberBetween(1, 50),
+            'case_id' => fake()->numberBetween(1, 10),
+            'client_id' => fake()->numberBetween(1, 10),
             'date' => fake()->date(),
             'time' => fake()->time(),
             'description' => fake()->sentence(),

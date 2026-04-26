@@ -9,13 +9,12 @@
 
     <header class="menu-nav">
         <nav>
-            <a href="/">MAIN PAGE</a>
-            <a href="/about">ABOUT US</a>
-            <a href="/team">THE TEAM</a>
-            <a href="/services">SERVICES</a>
-            <a href="/contact">CONTACT</a>
-            <a href="/login">LOGIN</a>
-            <a href="/register">REGISTER</a>
+          <a href="/">Főoldal</a>
+          <a href="/about">Rólunk</a>
+          <a href="/services">Szolgáltatások</a>
+          <a href="/contact">Kapcsolat</a>
+          <a href="/login">Bejelentkezés</a>
+          <a href="/register">Regisztráció</a>
         </nav>
     </header>
     <main class="page">

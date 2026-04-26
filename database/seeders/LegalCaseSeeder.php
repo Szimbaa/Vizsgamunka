@@ -1,6 +1,7 @@
 <?php
 
 namespace Database\Seeders;
+use App\Models\LegalCase;  
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -12,6 +13,6 @@ class LegalCaseSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+      LegalCase::factory()->count(10)->create();
     }
 }

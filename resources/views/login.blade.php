@@ -15,13 +15,12 @@
 
   <header class="menu-nav">
     <nav>
-      <a href="/">MAIN PAGE</a>
-      <a href="/about">ABOUT US</a>
-      <a href="/team">THE TEAM</a>
-      <a href="/services">SERVICES</a>
-      <a href="/contact">CONTACT</a>
-      <a href="/login">LOGIN</a>
-      <a href="/register">REGISTER</a>
+      <a href="/">Főoldal</a>
+      <a href="/about">Rólunk</a>
+      <a href="/services">Szolgáltatások</a>
+      <a href="/contact">Kapcsolat</a>
+      <a href="/login">Bejelentkezés</a>
+      <a href="/register">Regisztráció</a>
     </nav>
   </header>
 
@@ -40,7 +39,7 @@
         <label for="password">Password</label>
 
         <div class="input">
-          <input class="forms" type="password" id="password" name="password" placeholder="Enter password">
+          <input class="form-field" type="password" id="password" name="password" placeholder="Enter password">
           <i class="bi bi-eye password-eye"></i>
         </div>
 

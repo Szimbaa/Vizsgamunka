@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('legal_cases', function (Blueprint $table) {
-          $table->id('case_number');
+          $table->id('case_id');
           $table->foreignId('client_id')->nullable()
                 ->constrained('clients')->nullOnDelete();
           $table->foreignId('user_id')->nullable()
@@ -22,15 +22,15 @@ return new class extends Migration
           $table->string('case_type', 50)->nullable();
           $table->text('description')->nullable();
           $table->string('status', 50)->nullable();
-          $table->string('fee', 50)->nullable();
+          $table->string('fre', 50)->nullable();
           $table->decimal('total_work_hours', 5, 2)->nullable();
           $table->date('deadline')->nullable();
           $table->string('notification', 50)->nullable();
           $table->date('date')->nullable();
           $table->boolean('closed')->default(0);
           $table->decimal('elapsed_hours', 5, 2)->default(0.00);
-          $table->dateTime('started_at')->nullable();
-          $table->dateTime('ended_at')->nullable();
+          $table->dateTime('work_start')->nullable();
+          $table->dateTime('work_end')->nullable();
           $table->timestamps();
         });
     }

@@ -16,8 +16,8 @@ return new class extends Migration
           $table->text('template_text')->nullable();
           $table->foreignId('client_id')->nullable()
                 ->constrained('clients')->nullOnDelete();
-          $table->foreignId('case_number')->nullable()
-                ->constrained('legal_cases', 'case_number')->nullOnDelete();
+          $table->foreignId('case_id')->nullable()
+                ->constrained('legal_cases', 'case_id')->nullOnDelete();
           $table->string('month', 20)->nullable();
           $table->timestamps();
         });

@@ -17,12 +17,12 @@ return new class extends Migration
           $table->date('birth_date')->nullable();
           $table->string('birth_place', 100)->nullable();
           $table->string('mother_name', 100)->nullable();
-          $table->string('id_card_number', 50)->nullable();
+          $table->string('id_number', 50)->nullable();
           $table->string('address', 200)->nullable();
           $table->string('phone', 20)->nullable();
           $table->string('email', 100)->nullable();
           $table->string('tax_number', 50)->nullable();
-          $table->string('company_reg_number', 50)->nullable();
+          $table->string('company_registration', 50)->nullable();
           $table->timestamps();
   
         });

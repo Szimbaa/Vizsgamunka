@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('deadlines', function (Blueprint $table) {
           $table->id();
-          $table->foreignId('case_number')->nullable()
-                ->constrained('legal_cases', 'case_number')->nullOnDelete();
+          $table->foreignId('case_id')->nullable()
+                ->constrained('legal_cases', 'case_id')->nullOnDelete();
           $table->foreignId('client_id')->nullable()
                 ->constrained('clients')->nullOnDelete();
           $table->date('date')->nullable();

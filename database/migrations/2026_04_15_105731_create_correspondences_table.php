@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('correspondences', function (Blueprint $table) {
           $table->id();
-          $table->foreignId('case_number')->nullable()
-                ->constrained('legal_cases', 'case_number')->nullOnDelete();
+          $table->foreignId('case_id')->nullable()
+                ->constrained('legal_cases', 'case_id')->nullOnDelete();
           $table->string('status', 50)->nullable();
           $table->date('date')->nullable();
-          $table->text('message')->nullable();
+          $table->text('letter')->nullable();
           $table->timestamps();
         });
     }

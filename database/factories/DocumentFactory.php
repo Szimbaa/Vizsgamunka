@@ -18,8 +18,8 @@ class DocumentFactory extends Factory
     public function definition(): array
     {
       return [
-            'client_id' => fake()->numberBetween(1, 50),
-            'case_id' => fake()->numberBetween(1, 50),
+            'client_id' => fake()->numberBetween(1, 10),
+            'case_id' => fake()->numberBetween(1, 10),
             'document_type' => fake()->randomElement(['contract', 'invoice', 'letter']),
             'upload_date' => fake()->date(),
             'note' => fake()->sentence(),

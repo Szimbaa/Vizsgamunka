@@ -15,15 +15,15 @@ return new class extends Migration
           $table->id();
           $table->foreignId('client_id')->nullable()
                 ->constrained('clients')->nullOnDelete();
-          $table->foreignId('case_number')->nullable()
-                ->constrained('legal_cases', 'case_number')->nullOnDelete();
+          $table->foreignId('case_id')->nullable()
+                ->constrained('legal_cases', 'case_id')->nullOnDelete();
           $table->string('document_type', 50)->nullable();
           $table->date('upload_date')->nullable();
           $table->text('note')->nullable();
           $table->string('file', 200)->nullable();
-          $table->boolean('is_invoice')->nullable();
+          $table->boolean('invoice')->nullable();
           $table->string('sender', 100)->nullable();
-          $table->string('recipient', 100)->nullable();
+          $table->string('receiver', 100)->nullable();
           $table->timestamps();
         });
     }

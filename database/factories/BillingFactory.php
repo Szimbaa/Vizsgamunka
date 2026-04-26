@@ -19,8 +19,8 @@ class BillingFactory extends Factory
     {
       return [
         'template_text' => fake()->paragraph(),
-        'client_id' => fake()->numberBetween(1, 50),
-        'case_id' => fake()->numberBetween(1, 50),
+        'client_id' => fake()->numberBetween(1, 10),
+        'case_id' => fake()->numberBetween(1, 10),
         'month' => fake()->monthName(),
       ];
     }

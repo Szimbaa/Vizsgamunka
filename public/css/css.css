@@ -1,3 +1,5 @@
+/* --- általános --- */
+
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +10,20 @@
 body {
   background: #0a2f24;
   color: white;
+}
+
+/* --- közös kártya stílus --- */
+
+.card-style {
+  background-color: #ffffff0d;
+  border: 1px solid rgba(213, 150, 99, 0.3);
+  border-radius: 16px;
+  padding: 40px;
+}
+
+.menu-nav {
+  background-color: #123a2f;
+  border-bottom: 1px solid rgba(213, 150, 99, 0.2);
 }
 
 .menu-nav nav {
@@ -35,6 +51,8 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+/* --- Főoldal --- */
 
 .main-container {
   display: flex;
@@ -87,14 +105,16 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* --- Regisztráció, Bejelentkezés --- */
+
 .register-container,
 .login-container {
   width: 100%;
   max-width: 420px;
-  margin: auto;
+  margin: 50px auto 80px auto;
   padding: 32px 24px;
   border-radius: 16px;
-  background: #19473b;
+  background: #ffffff0d;
   text-align: center;
 }
 
@@ -123,21 +143,7 @@ body {
   border-radius: 8px;
   background: #0a2f24d9;
   color: white;
-  border: 1px solid #051813d9;
-}
-
-.form-field:hover,
-.form-field:focus {
-  border-color: rgba(213, 150, 99, 0.4);
-}
-
-.form-field:focus {
-  border-color: #d59663;
-  background: rgba(10, 47, 36, 1);
-}
-
-.form-field::placeholder {
-  color: #bdbdbd;
+  border: 1px solid #0b2d24d9;
 }
 
 .btn {
@@ -183,5 +189,158 @@ body {
   .register-container {
     margin: 30px 18px;
     padding: 35px 22px;
+  }
+}
+
+/* --- About oldal --- */
+
+.about-section {
+  min-height: 100vh;
+  padding: 80px 60px;
+}
+
+.about-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-title h1 {
+  margin-bottom: 15px;
+}
+
+.about-title p {
+  font-size: 18px;
+}
+
+.about-content {
+  display: flex;
+  gap: 40px;
+}
+
+.about-box {
+  background-color: #ffffff0d;
+  border: 1px solid rgba(213, 150, 99, 0.3);
+  padding: 40px;
+  width: 500px;
+  border-radius: 10px;
+}
+
+.about-box h2 {
+  color: #d59663;
+  margin-bottom: 20px;
+}
+
+.about-box p {
+  line-height: 1.9;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 900px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-box {
+    width: 100%;
+  }
+
+  .about-title h1 {
+    font-size: 50px;
+  }
+}
+
+/* --- Szolgáltatások oldal --- */
+
+.services-section {
+  padding: 50px;
+
+}
+
+.services-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.services-title h1 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.services-title p {
+  font-size: 18px;
+}
+
+.services-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.service-card {
+  background-color: #ffffff0d;
+  padding: 30px;
+  border-radius: 16px;
+}
+
+.service-card h2 {
+  color: #d59663;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+@media (max-width: 900px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Kapcsolat oldal --- */
+
+
+
+
+.contact-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-title h1 {
+  margin-bottom: 15px;
+}
+
+.contact-title p {
+  font-size: 18px;
+}
+
+.contact-box {
+  background-color: #ffffff0d;
+  border: 1px solid rgba(213, 150, 99, 0.3);
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+}
+
+.contact-box h2 {
+  color: #d59663;
+  margin-bottom: 20px;
+}
+
+.contact-box p {
+  margin-bottom: 18px;
+}
+
+.contact-email {
+  margin-top: 15px;
+  color: #d59663;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 50px 25px;
+  }
+
+  .contact-box {
+    padding: 30px;
   }
 }

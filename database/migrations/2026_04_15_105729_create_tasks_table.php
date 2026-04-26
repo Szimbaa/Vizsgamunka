@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
           $table->id();
-          $table->foreignId('case_number')->nullable()
-                ->constrained('legal_cases', 'case_number')->nullOnDelete();
-          $table->date('due_date')->nullable();
-          $table->text('task_description')->nullable();
+          $table->foreignId('case_id')->nullable()
+                ->constrained('legal_cases', 'case_id')->nullOnDelete();
+          $table->date('deadline')->nullable();
+          $table->text('task')->nullable();
           $table->string('attachment', 200)->nullable();
           $table->string('sender_name', 100)->nullable();
-          $table->string('recipient_name', 100)->nullable();
+          $table->string('receiver_name', 100)->nullable();
           $table->decimal('work_hours', 5, 2)->default(0.00);
           $table->boolean('completed')->default(0);
           $table->timestamps();

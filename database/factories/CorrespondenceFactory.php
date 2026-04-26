@@ -18,7 +18,7 @@ class CorrespondenceFactory extends Factory
     public function definition(): array
     {
       return [
-        'case_id' => fake()->numberBetween(1, 50),
+        'case_id' => fake()->numberBetween(1, 10),
         'status' => fake()->randomElement(['sent', 'received', 'pending']),
         'date' => fake()->date(),
         'letter' => fake()->paragraph(),

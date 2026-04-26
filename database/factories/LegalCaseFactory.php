@@ -21,20 +21,20 @@ class LegalCaseFactory extends Factory
       $end = fake()->dateTimeBetween($start, 'now');
 
         return [
-          'client_name' => fake()->name(),
+          'client_id' => fake()->numberBetween(1, 10),
             'opposing_party' => fake()->name(),
-            'title' => fake()->sentence(3),
-            'type' => fake()->randomElement(['Civil', 'Criminal', 'Administrative']),
+            'case_title' => fake()->sentence(3),
+            'case_type' => fake()->randomElement(['Civil', 'Criminal', 'Administrative']),
             'description' => fake()->paragraph(),
             'status' => fake()->randomElement(['Open', 'In Progress', 'Closed']),
             'user_id' => fake()->numberBetween(1, 10),
-            'pricing' => fake()->randomElement(['Hourly', 'Fixed', 'Retainer']),
+            'fre' => fake()->randomElement(['Hourly', 'Fixed', 'Retainer']),
             'total_work_hours' => fake()->randomFloat(2, 0, 200),
             'deadline' => fake()->date(),
             'notification' => fake()->randomElement(['Email', 'SMS', 'None']),
             'date' => fake()->date(),
             'closed' => fake()->boolean(),
-            'elapsed_work_hours' => fake()->randomFloat(2, 0, 200),
+            'elapsed_hours' => fake()->randomFloat(2, 0, 200),
             'work_start' => $start,
             'work_end' => $end,
         ];
