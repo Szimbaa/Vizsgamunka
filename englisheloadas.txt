@@ -1,0 +1,48 @@
+
+ezzel kezdunk, elmondjuk aztanmagyarul folytatjuk remeljuk. ezzel lefedjuk a bemutatast aztn ha kerdeznek valaszolunk, ezt be kene magolni. 
+1. előadó (kezdés + működés)Petra
+
+Slide 1 – Introduction
+
+Hello, we present our project called ÜgyVédjegy.
+It is a client management system developed for our final exam.
+
+Slide 2 – Goal
+
+The goal of the project is to manage client data easily.
+The system helps users store, update and view client information.
+
+Slide 3 – Features
+
+The main features are creating, editing, deleting and listing clients.
+The system provides a simple and clear interface.
+
+Slide 4 – Technology
+
+We used Laravel for backend development.
+The database is MySQL.
+The system follows the MVC architecture.
+
+👤 2. előadó (adatbázis + miért + lezárás)Zsofi
+
+Slide 5 – Database
+
+The system uses a relational database.
+Tables are connected using relationships.
+We perform CRUD operations on the data.
+
+Slide 6 – Validation
+
+We implemented validation on both frontend and backend.
+Required fields must be filled before saving data.
+
+Slide 7 – Why this solution
+
+Laravel allows fast and structured development.
+MySQL is stable and widely used.
+MVC helps to keep the code organized.
+
+Slide 8 – Conclusion
+
+The system is functional and easy to extend.
+It meets the requirements of the final exam.
